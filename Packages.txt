@@ -1,0 +1,12 @@
+# Main Apps
+hyprland (via community repo)
+waybar
+wofi
+neovim
+swww
+pywal
+
+# Essentials
+seatd
+dbus
+xdg-desktop-portal-hyprland
