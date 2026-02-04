@@ -1,0 +1,41 @@
+
+/* 1. Import the dynamic colors */
+@import "/home/fraggi/.cache/wal/colors-wofi.css";
+
+/* The main window */
+window {
+    margin: 0px;
+    /* Use the pywal background with transparency */
+    background-color: background; 
+    /* This was #cbcce0, now it's your wallpaper accent */
+    border: 2px solid @color4;  
+    border-radius: 10px;
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+}
+
+#input {
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    color: @foreground;
+    background-color: @background;
+}
+
+#entry:selected {
+    /* Use your pywal color for the highlight box */
+    background-color: @background;
+    /* This forces the selection border to match your Hyprland borders */
+    border: 2px solid @color4 !important;
+    outline: none;
+}
+
+#text {
+    margin: 5px;
+    color: @foreground;
+}
+
+/* Optional: make the selected text pop */
+#text:selected {
+    color: @color4;
+    font-weight: bold;
+}

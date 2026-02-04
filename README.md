@@ -1,2 +1,0 @@
-# Void-Hyprland
-Personal Dotfiles

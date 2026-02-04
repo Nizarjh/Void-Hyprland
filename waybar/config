@@ -1,0 +1,84 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 38,
+  "hide_on_fullscreen": true,
+  "spacing": 3,
+
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["custom/network", "battery", "cpu", "custom/mem", "custom/pipewire", "custom/wallpaper", "custom/power", "custom/padding"],
+
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+    "all-outputs": true,
+    "sort-by-number": true
+  },
+  "persistent-workspaces": {
+    "*": 5 // This keeps 1-5 visible at all times
+},
+
+  "clock": {
+	  "format": "{:%H:%M}"
+  },
+
+  "cpu": {
+	  "format": "  {usage}%",
+	  "interval": 3
+  },
+
+  "custom/mem": {
+    "format": "  {}%",
+    "interval": 5,
+    "exec": "free -m | awk '/Mem:/ {print int($3/$2 * 100)}'",
+    "on-click": "kitty -e btop"
+},
+
+  "battery": {
+	  "format": "󰁹 {capacity}%",
+	  "interval": 10
+  },
+
+  "custom/pipewire": {
+    "exec": "wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2 * 100)\"%\"}'",
+    "interval": 1,
+    "format": "   {}",
+    "on-click": "pavucontrol",
+    "signal": 1
+  },
+
+  "custom/eth": {
+    "exec": "~/.config/waybar/scripts/net.sh",
+    "interval": 5,
+    "format": "{}",
+    "tooltip": false
+},
+  
+  "custom/network": {
+    "format": "{}",
+    "exec": "bash -c 'status=$(nmcli -t -f STATE g); if [ \"$status\" = \"connected\" ]; then ssid=$(nmcli -t -f active,ssid dev wifi | grep \"^yes\" | cut -d: -f2); if [ -z \"$ssid\" ]; then echo \"󰈀  Ethernet\"; else echo \"   $ssid\"; fi; else echo \"󰖪  Disconnected\"; fi'",
+    "interval": 10,
+    "on-click": "kitty -e nmtui",
+    "on-click-right": "nmcli radio wifi off",
+    "on-click-middle": "nmcli radio wifi on",
+    "tooltip": true
+},
+
+  "custom/power": {
+	  "format": "⏻",
+	  "tooltip": false,
+    "on-click": "~/.config/hypr/scripts/powermenu.sh"
+  },
+
+  "custom/wallpaper": {
+    "format": "󰸉 ",
+    "on-click": "~/.config/hypr/scripts/wall-change.sh",
+    "tooltip": false
+},
+
+  "custom/padding": {
+    "format": " ", // Just a few spaces
+    "tooltip": false
+  }
+ }
