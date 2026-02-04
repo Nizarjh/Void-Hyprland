@@ -1,0 +1,19 @@
+# Neovim / Vim junk
+*.swp
+*.swo
+*~
+.netrwhist
+undo/
+
+# Pywal / Cache stuff (Better to generate these fresh on a new install)
+.cache/
+*.log
+
+# Sensitive/System junk
+.DS_Store
+Thumbs.db
+lost+found/
+
+# Hyprland/Wayland logs
+hyprland.log
+*.wayland-errors
