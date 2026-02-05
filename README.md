@@ -14,7 +14,6 @@ starship .config/starship.toml (this is the config file)
 Install the needed packages:
 sudo xbps-install -Sy waybar wofi neovim pywal swww mesa mesa-dri seatd sddm dbus xdg-desktop-portal-hyprland
 
-Hyprland case:
 # Add the Hyprland community repo
 echo "repository=https://raw.githubusercontent.com/Makrennel/hyprland-void/repository-x86_64-glibc" | sudo tee /etc/xbps.d/hyprland-void.conf
 
