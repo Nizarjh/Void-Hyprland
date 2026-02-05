@@ -1,4 +1,15 @@
-Personal Dotfiles made originally for void linux
+# My Hyprland Dotfiles
+> My personal Dotfiles made originally for void linux
+
+## Gallery
+
+### Desktop Overview
+![Main](screenshots/Centered_Fastfetch.png)
+![Main](screenshots/Centered_logo_Mill.png)
+![Main](Centered_logo_winter.png)
+
+### Terminal & Fetch
+![Terminal](screenshots/Terminal.png)
 
 # Directories
 hypr .config/hypr/  (here you have hyprland.conf and hyprlock.conf)
