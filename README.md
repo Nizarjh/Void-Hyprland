@@ -11,6 +11,8 @@ wofi .config/wofi (style.css and wall.css files)
 
 pywal .config/wal/templates (add here the color templates for hyprland and wofi) (rofi too if you use it)
 
+Wallpapers ~/Pictures/Wallpapers 
+
 fish .config/fish (config.fish file for the aliases etc...)
 
 kitty .config/kitty (kitty config file)
