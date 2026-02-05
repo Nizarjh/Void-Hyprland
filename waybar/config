@@ -7,7 +7,7 @@
 
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["custom/network", "battery", "cpu", "custom/mem", "custom/pipewire", "custom/wallpaper", "custom/power", "custom/padding"],
+  "modules-right": ["custom/updates", "custom/network", "battery", "cpu", "custom/mem", "custom/pipewire", "custom/wallpaper", "custom/power"],
 
   "hyprland/workspaces": {
     "format": "{name}",
@@ -68,17 +68,21 @@
   "custom/power": {
 	  "format": "⏻",
 	  "tooltip": false,
-    "on-click": "~/.config/hypr/scripts/powermenu.sh"
+    "on-click": "~/.config/hypr/scripts/powermenu.fish"
   },
 
-  "custom/wallpaper": {
-    "format": "󰸉 ",
-    "on-click": "~/.config/hypr/scripts/wall-change.sh",
+  "custom/updates": {
+    "format": "{}",
+    "exec": "/home/fraggi/.config/hypr/scripts/check-updates.sh", // Use full path!
+    "interval": 3600,
+    "on-click": "kitty -e fish -c 'sudo xbps-install -Su; fish'",
     "tooltip": false
 },
 
-  "custom/padding": {
-    "format": " ", // Just a few spaces
+  "custom/wallpaper": {
+    "format": "󰸉 ",
+    "on-click": "~/.config/hypr/scripts/wall-change.fish",
     "tooltip": false
-  }
+},
+
  }

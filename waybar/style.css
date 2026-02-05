@@ -55,12 +55,19 @@
     margin-right: 4px;
 }
 
+#custom-updates {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 5px; /* Adds space outside the module border */
+    color: #81a1c1;    /* Optional: Void Blue color */
+}
+
 #workspaces,
 #custom-mem, 
 #cpu, 
 #battery, 
 #network, 
-#custom-pipewire, 
+#custom-pipewire,
 #custom-power {
     margin: 0 4px; /* This creates the separation between modules */
 }
@@ -68,6 +75,7 @@
 /* --- HOVER FIX FOR ALL MODULES --- */
 /* This stops the "Solid Blue" block that covers text */
 #custom-wallpaper:hover,
+#custom-updates:hover,
 #network:hover,
 #battery:hover,
 #cpu:hover,
