@@ -24,7 +24,7 @@
   },
 
   "cpu": {
-	  "format": "  {usage}%",
+	  "format": "   {usage}%",
 	  "interval": 3
   },
 
@@ -51,7 +51,7 @@
   "custom/network": {
     "format": "{}",
     "exec": "bash -c 'status=$(nmcli -t -f STATE g); if [ \"$status\" = \"connected\" ]; then ssid=$(nmcli -t -f active,ssid dev wifi | grep \"^yes\" | cut -d: -f2); if [ -z \"$ssid\" ]; then echo \"󰈀  Ethernet\"; else echo \"   $ssid\"; fi; else echo \"󰖪  Disconnected\"; fi'",
-    "interval": 10,
+    "interval": 3,
     "on-click": "kitty -e nmtui",
     "on-click-right": "nmcli radio wifi off",
     "on-click-middle": "nmcli radio wifi on",

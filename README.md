@@ -2,16 +2,25 @@ Personal Dotfiles made originally for void linux
 
 # Directories
 hypr .config/hypr/  (here you have hyprland.conf and hyprlock.conf)
+
 waybar .config/waybar/ (here you have the config file and the css file)
+
 waybar scripts .config/waybar/scripts (all the waybar scripts)
+
 wofi .config/wofi (style.css and wall.css files)
+
 pywal .config/wal/templates (add here the color templates for hyprland and wofi) (rofi too if you use it)
+
 fish .config/fish (config.fish file for the aliases etc...)
+
 kitty .config/kitty (kitty config file)
+
 starship .config/starship.toml (this is the config file)
 
+# WARNING 
+My waybar doesnt support modules like "network" "pulseaudio" etc.. so i made custom modules, if you're not okay with that you'll need to change the modules yourself
 
-Install the needed packages:
+# Install the needed packages
 sudo xbps-install -Sy waybar wofi neovim pywal swww mesa mesa-dri seatd sddm dbus xdg-desktop-portal-hyprland
 
 # Add the Hyprland community repo
@@ -28,7 +37,9 @@ sudo ln -s /etc/sv/sddm /var/service/
 # Add yourself to the seatd group
 sudo usermod -aG wheel disk audio video storage network kvm input dbus polkitd _seatd fuse $(whoami)
 
-# Add the fish shell [RECOMMENDED](optional, i've added both the .sh scripts and .fish scripts) (if you want to use the .sh file you need to configure the path in the waybar module)
+# Add the fish shell [RECOMMENDED]
+(optional, i've added both the .sh scripts and .fish scripts) (if you want to use the .sh file you need to configure the path in the waybar module)
+
 sudo xbps-install -S fish-shell
 chsh -s /usr/bin/fish (changes the user shell to fish)
 
