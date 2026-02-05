@@ -6,7 +6,7 @@
 ### Desktop Overview
 ![Main](screenshots/Centered_Fastfetch.png)
 ![Main](screenshots/Centered_logo_Mill.png)
-![Main](Centered_logo_winter.png)
+![Main](screenshot/Centered_logo_winter.png)
 
 ### Terminal & Fetch
 ![Terminal](screenshots/Terminal.png)
