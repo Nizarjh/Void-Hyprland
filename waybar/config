@@ -47,13 +47,6 @@
     "on-click": "pavucontrol",
     "signal": 1
   },
-
-  "custom/eth": {
-    "exec": "~/.config/waybar/scripts/net.sh",
-    "interval": 5,
-    "format": "{}",
-    "tooltip": false
-},
   
   "custom/network": {
     "format": "{}",
@@ -68,12 +61,12 @@
   "custom/power": {
 	  "format": "⏻",
 	  "tooltip": false,
-    "on-click": "~/.config/hypr/scripts/powermenu.fish"
+    "on-click": "~/.config/waybar/scripts/powermenu.fish"
   },
 
   "custom/updates": {
     "format": "{}",
-    "exec": "/home/fraggi/.config/hypr/scripts/check-updates.sh", // Use full path!
+    "exec": "/home/fraggi/.config/waybar/scripts/check-updates.sh",
     "interval": 3600,
     "on-click": "kitty -e fish -c 'sudo xbps-install -Su; fish'",
     "tooltip": false
@@ -81,7 +74,7 @@
 
   "custom/wallpaper": {
     "format": "󰸉 ",
-    "on-click": "~/.config/hypr/scripts/wall-change.fish",
+    "on-click": "~/.config/waybar/scripts/wall-change.fish",
     "tooltip": false
 },
 
