@@ -4,19 +4,19 @@
     background: transparent;
 }
 
-/* --- WORKSPACES FIX --- */
+/* --- WORKSPACES --- */
 #workspaces button {
     padding: 0 8px;
     margin: 0 4px;
     background: transparent;
-    color: @foreground; /* Force readable text */
+    color: @foreground;
     opacity: 0.7; 
     transition: all 0.2s ease;
 }
 
 #workspaces button.active {
-    color: @background;        /* Dark text on light background... */
-    background-color: @color4; /* ...or vice versa */
+    color: @background;
+    background-color: @color4;
     border-radius: 10px;
     opacity: 1.0;
     font-weight: bold;
@@ -24,10 +24,10 @@
 
 #workspaces button:hover {
     background: @foreground;
-    opacity: 0.2; /* This makes the background 20% transparent */
+    opacity: 0.2;
 }
 
-/* --- MODULES / MEMORY ICON FIX --- */
+/* --- MODULES --- */
 #custom-mem, #cpu, #battery, #network, #custom-pipewire, #custom-wallpaper {
     padding: 0 6px;
     color: @foreground;
@@ -36,7 +36,7 @@
 .modules-left,
 .modules-center,
 .modules-right {
-    /* Pywal colors + CC (which is hex for 80% transparency) */
+    /* Pywal colors + CC */
     background: @background;
     opacity: 1;
     border: 1px solid rgba(255, 255, 255, 0.1); 
@@ -45,11 +45,9 @@
     margin: 5px 5px; 
 }
 
-/* Specifically target the memory icon to ensure it sits right */
 #custom-mem {
     font-family: "JetBrainsMono Nerd Font";
     font-size: 14px;
-    /* Use padding instead of vertical-align to center it */
     padding-top: 1px; 
     padding-bottom: 1px;
     margin-right: 4px;
@@ -58,8 +56,8 @@
 #custom-updates {
     padding-left: 10px;
     padding-right: 10px;
-    margin-right: 5px; /* Adds space outside the module border */
-    color: #81a1c1;    /* Optional: Void Blue color */
+    margin-right: 5px;
+    color: #81a1c1;
 }
 
 #workspaces,
@@ -69,11 +67,10 @@
 #network, 
 #custom-pipewire,
 #custom-power {
-    margin: 0 4px; /* This creates the separation between modules */
+    margin: 0 4px;
 }
 
-/* --- HOVER FIX FOR ALL MODULES --- */
-/* This stops the "Solid Blue" block that covers text */
+/* --- HOVER FOR ALL MODULES --- */
 #custom-wallpaper:hover,
 #custom-updates:hover,
 #network:hover,
@@ -81,11 +78,11 @@
 #cpu:hover,
 #custom-mem:hover,
 #custom-pipewire:hover {
-    background: @color2; /* 30% transparency so text stays clear */
+    background: @color2;
     color: @foreground;
 }
 
-/* Power Button - Keep it distinct */
+/* Power Button */
 #custom-power:hover {
     background: @color1;
     color: @background;
