@@ -7,7 +7,7 @@
 
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["custom/updates", "custom/network", "battery", "cpu", "custom/mem", "custom/pipewire", "custom/wallpaper", "custom/power"],
+  "modules-right": ["custom/updates", "network", "battery", "cpu", "memory", "pulseaudio", "custom/wallpaper", "custom/power"],
 
   "hyprland/workspaces": {
     "format": "{name}",
@@ -22,6 +22,37 @@
   "clock": {
 	  "format": "{:%H:%M}"
   },
+
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-muted": "󰝟 Muted",
+    "format-icons": {
+        "headphone": " ",
+        "headset": " ",
+        "phone": " ",
+        "portable": " ",
+        "car": " ",
+        "default": [" ", " "]
+    },
+    "on-click": "pavucontrol"
+},
+
+"memory": {
+    "interval": 5,
+    "format": "  {}%",
+    "max-length": 10,
+    "tooltip-format": "Memory Used: {used:0.1f}G / {total:0.1f}G",
+    "on-click": "kitty -e btop"
+},
+
+  "network": {
+      "format-wifi": "  {essid} ({signalStrength}%)",
+      "format-ethernet": "󰈀  Ethernet",
+      "format-disconnected": "⚠  Disconnected",
+      "on-click": "kitty -e nmtui",
+      "tooltip": true,
+      "interval": 3
+    },
 
   "cpu": {
 	  "format": "   {usage}%",
@@ -47,16 +78,6 @@
     "on-click": "pavucontrol",
     "signal": 1
   },
-  
-  "custom/network": {
-    "format": "{}",
-    "exec": "bash -c 'status=$(nmcli -t -f STATE g); if [ \"$status\" = \"connected\" ]; then ssid=$(nmcli -t -f active,ssid dev wifi | grep \"^yes\" | cut -d: -f2); if [ -z \"$ssid\" ]; then echo \"󰈀  Ethernet\"; else echo \"   $ssid\"; fi; else echo \"󰖪  Disconnected\"; fi'",
-    "interval": 3,
-    "on-click": "kitty -e nmtui",
-    "on-click-right": "nmcli radio wifi off",
-    "on-click-middle": "nmcli radio wifi on",
-    "tooltip": true
-},
 
   "custom/power": {
 	  "format": "⏻",

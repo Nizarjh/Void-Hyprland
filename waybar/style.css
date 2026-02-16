@@ -28,7 +28,7 @@
 }
 
 /* --- MODULES --- */
-#custom-mem, #cpu, #battery, #network, #custom-pipewire, #custom-wallpaper {
+#memory, #cpu, #battery, #network, #pulseaudio, #custom-wallpaper {
     padding: 0 6px;
     color: @foreground;
 }
@@ -45,7 +45,7 @@
     margin: 5px 5px; 
 }
 
-#custom-mem {
+#memory {
     font-family: "JetBrainsMono Nerd Font";
     font-size: 14px;
     padding-top: 1px; 
@@ -61,11 +61,11 @@
 }
 
 #workspaces,
-#custom-mem, 
+#memory, 
 #cpu, 
 #battery, 
 #network, 
-#custom-pipewire,
+#pulseaudio,
 #custom-power {
     margin: 0 4px;
 }
@@ -76,8 +76,8 @@
 #network:hover,
 #battery:hover,
 #cpu:hover,
-#custom-mem:hover,
-#custom-pipewire:hover {
+#memory:hover,
+#pulseaudio:hover {
     background: @color2;
     color: @foreground;
 }

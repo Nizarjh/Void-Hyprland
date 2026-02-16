@@ -30,9 +30,6 @@ kitty .config/kitty (kitty config file)
 
 starship .config/starship.toml (this is the config file)
 
-# WARNING 
-My waybar doesnt support modules like "network" "pulseaudio" etc.. so i made custom modules, if you're not okay with that you'll need to change the modules yourself
-
 # Install the needed packages
 sudo xbps-install -Sy waybar wofi neovim pywal swww mesa mesa-dri seatd sddm dbus xdg-desktop-portal-hyprland
 
